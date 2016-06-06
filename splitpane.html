@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/shagstrom/split-pane/master/split-pane.css">
+  <script src="https://cdn.rawgit.com/shagstrom/split-pane/master/split-pane.js"></script>
+</head>
+<div class="split-pane">
+  <style type="text/css">html, body {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .split-pane-divider {
+    background: #aaa;
+  }
+  #left-component {
+    width: 20em; /* Same as divider left */
+  }
+  #my-divider {
+    left: 20em;
+    width: 5px;
+  }
+  #right-component {
+    left: 20em; /* Same as divider left */
+    margin-left: 5px; /* Same as divider width */
+  }
+  </style>
+<body>
+  <div id="split-pane-1" class="split-pane fixed-left">
+    <div id="left-component" class="split-pane-component">
+      <b>test left</b>
+    </div>
+    <div id="my-divider" class="split-pane-divider"></div>
+    <div id="right-component" class="split-pane-component">
+      <b>test right</b>
+    </div>
+  </div>
+</body>
+
+<script>
+  $('div.split-pane').splitPane();
+</script>
+</div>
+</html>
